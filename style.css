@@ -1,0 +1,101 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    overflow:hidden;
+}
+
+#bootScreen{
+    position:fixed;
+    inset:0;
+    background:black;
+    color:rgb(0, 255, 72);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+#bootScreen h1{
+    font-size:72px;
+    letter-spacing:6px;
+}
+
+.subtitle{
+    margin-top:10px;
+    color:rgb(0, 255, 72);
+    font-size:18px;
+}
+
+#status{
+    margin-top:40px;
+    font-size:20px;
+    color:rgb(0, 255, 72);
+}
+
+#desktop{
+    display:none;
+    width:100vw;
+    height:100vh;
+    background:linear-gradient(to right,#4b4b4b,#212121);
+}
+
+#taskbar{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:42px;
+    background:black;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 15px;
+}
+
+#clock{
+    color:white;
+    font-size:18px;
+}
+
+#loginScreen{
+  display:none;
+  position:fixed;
+  inset:0;
+  background: black;
+  color: rgb(0, 255, 72);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+#loginScreen input{
+  background: #111;
+  border: 1px solid rgb(0, 255, 72);
+  color: white;
+  padding: 10px;
+  width: 250px;
+}
+
+#loginScreen button{
+  background: black;
+  border: 1px solid rgb(0, 255, 72);
+  color: rgb(0, 255, 72);
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+#error{
+  color:red;
+}

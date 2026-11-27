@@ -19,7 +19,7 @@ function updateRuntimeclock() {
     setInterval(1);
     let ms = runtime.toString().padStart(3, "0");
     runtime++;
-    runtimeclock.textContent;
+    runtimeclock.textContent = `${ms}`;
 }
 
 

@@ -13,6 +13,15 @@ function updateClock() {
 
     clock.textContent = `${hours}:${minutes}:${seconds} ${suffix}`;
 }
+function updateRuntimeclock() {
+    let runtime = 0;
+    const runtimeclock = getElementById(runtimeclock);
+    setInterval(1);
+    let ms = runtime.toString().padStart(3, "0");
+    runtime++;
+    runtimeclock.textContent;
+}
+
 
 function login(){
     const user = document.getElementById("username").value;
@@ -22,6 +31,8 @@ function login(){
     if(user === "GUEST" && pass === "djCORsa"){
         document.getElementById("loginScreen").style.display="none";
         document.getElementById("desktop").style.display="block";
+        updateRuntimeclock()
+
     }
     else{
         let flashes = 0;
@@ -50,4 +61,4 @@ setTimeout(() => {
     document.getElementById("bootScreen").style.display = "none";
     document.getElementById("loginScreen").style.display="flex";
     document.getElementById("desktop").style.display = "block";
-}, 1000);
+}, 3000);

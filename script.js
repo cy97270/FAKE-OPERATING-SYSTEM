@@ -16,7 +16,6 @@ function updateClock() {
 function updateRuntimeclock() {
     let runtime = 0;
     const runtimeclock = getElementById(runtimeclock);
-    setInterval(1);
     let ms = runtime.toString().padStart(3, "0");
     runtime++;
     runtimeclock.textContent = `${ms}`;
@@ -31,7 +30,7 @@ function login(){
     if(user === "GUEST" && pass === "djCORsa"){
         document.getElementById("loginScreen").style.display="none";
         document.getElementById("desktop").style.display="block";
-        updateRuntimeclock()
+        setInterval(updateRuntimeclock(), 1)
 
     }
     else{
